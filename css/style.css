@@ -1,0 +1,604 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(253, 252, 252);
+}
+/*----------HEADER y BARRA_NAV-------*/
+.header {
+    background-color: #070707;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav__menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+    color:rgb(50, 50, 238);
+}
+
+.nav__link:focus-visible,
+.nav__btn:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+.nav__btn {
+    background-color: #3c47e9;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav__btn:hover {
+    background-color: #1b25b4;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.nav__logo-img {
+    width: 110px;
+    height: auto;
+    display: block;
+}
+
+/*-------SECCION INICIO--------*/
+.sec {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 5%;
+    background-color: #000000;
+    background-image: linear-gradient(85deg, rgb(17 17 17 / 88%) 0%, rgb(17 17 17 / 65%) 55%, rgb(17 17 17 / 25%) 100%), url("../img/img_inicio.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.sec__content {
+    max-width: 720px;
+    position: relative;
+    z-index: 1;
+}
+
+.sec__titulo{
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.sec__parrafo {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    margin-right: 50px;
+}
+/*-------SECCION NOSOTROS------*/
+.sec__nosotros {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 5%;
+    background-color:#4b6986;
+}
+.nosotros__content {
+    flex: 1;
+}
+.nosotros__titulo {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+.nosotros__description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #CCCCCC;
+    margin-bottom: 30px;
+}
+.nosotros__img {
+    flex: 1;
+}
+.nosotros__img-file {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center 50%;
+    border-radius: 10px;
+    display: block;
+}
+
+/*------SECCION SERVICIOS------*/
+.sec__servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  background-color: #6e7072;
+}
+
+/* Encabezado */
+.servicios-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.servicios-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+/* Contenedor del Carrusel */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* El riel horizontal que oculta las tarjetas sobrantes */
+.carousel-track {
+  display: flex;
+  width: 100%;
+  gap: 0px; 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+  padding-bottom: 10px;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.card__content {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: center;
+  box-sizing: border-box;
+  padding: 50px;
+  border-radius: 28px;
+  border: 4px solid rgba(255, 255, 255, 0.4); 
+  background-color: #4b6986; 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Contenedor del texto (Título + Párrafo) */
+.card__details {
+  flex: 1;
+  color: rgb(253, 252, 252);
+}
+
+.card__text {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 16px 0; 
+  line-height: 1.2;
+}
+
+.card__paragraph {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Imagen de la tarjeta */
+.card__img {
+  flex: 1;
+  max-width: 250px;
+  max-height: 500px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 10px; 
+  padding: 0px; 
+}
+
+/* Botones abajo y centrados */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  width: 100%;
+}
+.btn-arrow {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, background-color 0.2s;
+}
+.btn-arrow:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.05);
+}
+.btn-arrow svg {
+  fill: #333333;
+}
+
+/*------SECCION SEDES------*/
+
+/* Contenedor general */
+.sec__sedes {
+    display: flex;
+    width: 100%;
+    flex-direction: column; 
+    align-items: center;    
+    background-color: #4b6986; 
+    padding: 60px 20px;
+    font-family: sans-serif;
+}
+
+/* Estilo del título superior */
+.sedes__titulo {
+    color: #ffffff;
+    font-size: 2rem;
+    text-transform: uppercase; 
+    letter-spacing: 2px;       
+    margin-bottom: 12px; 
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilo para la descripción de la sección */
+.sedes__descripcion {
+    color:#ffffff; 
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px; 
+    max-width: 600px;    
+    line-height: 1.5;
+}
+
+/* Contenedor que agrupa y alinea las 2 tarjetas */
+.sedes__grid {
+    display: flex;
+    justify-content: center;
+    gap: 150px; 
+    width: 200%;
+    max-width: 1500px;
+}
+
+/* Estilo de cada tarjeta */
+.card__sede {
+    background-color: #141414; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    flex: 1;
+    max-width: 600px; 
+    border: 1px solid #222; 
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto de borde al pasar el mouse */
+.card__sede:hover {
+    border-color: rgba(255, 255, 255, 0.5); 
+}
+
+/* Imagen de la tarjeta */
+.sede__img {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover; 
+    display: block;
+}
+
+/* Contenedor del texto */
+.sec_contactanos{
+    align-items: center;
+}
+.sede__contenido {
+    padding: 24px; 
+    color: #ffffff; 
+}
+
+/* Título de la sede */
+.sede__contenido h1 {
+    font-size: 1.4rem;
+    margin: 0 0 12px 0; 
+    font-weight: bold;
+}
+
+/* Descripción de la sede */
+.sede__contenido p {
+    font-size: 0.95rem;
+    color: #aaaaaa; 
+    line-height: 1.6;
+    margin: 0;
+}
+/*------SECCION CONTACTANOS------*/
+.contacto {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 5%;
+    background-color: gray;
+    min-height: 100vh;     
+    box-sizing: border-box;
+}
+
+.contacto__info {
+    flex: 1;
+}
+
+.contacto__title {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.contacto__description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #CCCCCC;
+    margin-bottom: 30px;
+}
+
+.contacto__subtitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* FORMULARIO */
+
+.contacto__form-container {
+    width: 100%;            
+    max-width: 550px;       
+    background-color: #222222;
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.contacto__form-title {
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-align: center;  
+    color: white;
+}
+
+.contacto__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacto__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contacto__label {
+    font-size: 15px;
+}
+
+.contacto__input,
+.contacto__select,
+.contacto__textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #333333;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.contacto__input:focus,
+.contacto__select:focus,
+.contacto__textarea:focus {
+    outline: 2px solid #E50914;
+}
+
+.contacto__input:invalid:not(:placeholder-shown),
+.contacto__textarea:invalid:not(:placeholder-shown),
+.contacto__select:invalid {
+    border-color: #FF5964;
+    box-shadow: 0 0 0 2px rgb(255 89 100 / 20%);
+}
+
+.contacto__input:focus-visible,
+.contacto__select:focus-visible,
+.contacto__textarea:focus-visible,
+.contacto__submit:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 2px;
+}
+
+.contacto__textarea {
+    resize: vertical;
+}
+
+.contacto__submit {
+    background-color: #E50914;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#respuesta {
+    color: #2ecc71; 
+    font-size: 14px;
+    text-align: center;   
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+    display: block;
+}
+/*----------FOOTER--------*/
+.footer {
+    background-color: #080808; /* Fondo negro intenso */
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+.footer__col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilos de la Columna 1 */
+.footer__logo {
+    max-width: 140px; 
+    height: auto;
+    display: block;
+}
+
+.footer__text {
+    color: #aaaaaa; 
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 280px;
+}
+
+.footer__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__links a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+    color: #ffffff;
+}
+
+.footer__info {
+    color: #aaaaaa;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Fila de iconos de redes sociales */
+.footer__socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+/* Círculos oscuros para los iconos */
+.social__icon {
+    width: 40px;
+    height: 40px;
+    background-color: #222222; /* Fondo gris como el de tu imagen */
+    border-radius: 50%; /* Hace el contenedor circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.social__icon:hover {
+    background-color: #333333; /* Aclara ligeramente al pasar el mouse */
+}
+
+/* Enlace rojo "Envíanos un mensaje" */
+.footer__msg-link {
+    color: #181bc7; /* Color rojo Sport Club */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.footer__msg-link:hover {
+    text-decoration: underline; /* Subrayado sutil al pasar el mouse */
+}
+
+/* Barra inferior de Derechos de Autor */
+.footer__bottom {
+    border-top: 1px solid #1f1f1f; /* Línea divisoria horizontal */
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer__bottom p {
+    color: #666666; /* Gris más oscuro para el copyright */
+    font-size: 13px;
+    margin: 0;
+}
